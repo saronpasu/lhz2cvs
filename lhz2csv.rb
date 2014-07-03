@@ -120,7 +120,10 @@ SKILL_LABEL = {
 
 
 #p ARGV
-pcid = ARGV.last.match(/id=(\d+)$/) ? $1 : nil
+pcid = nil
+pcid = ARGV[0] || nil
+exit if pcid.nil?
+pcid = pcid.match(/(\d+)/) ? $1 : nil
 exit if pcid.nil?
 
 uri = URI.parse(API_PATH+pcid+'.json')
@@ -336,5 +339,4 @@ end
 filename = "lhz_pc_"+pcid+".csv"
 
 open(filename, 'w+'){|f|f.print(csv_data)}
-
 
