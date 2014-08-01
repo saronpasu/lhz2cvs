@@ -1,6 +1,27 @@
+使い方
 
-ruby lhx2csv http://lhtrpg.com /lhz/pc?id=(your_pc_id)
+事前に冒険者窓口で「外部ツールからの〈冒険者〉データ参照を許可する」にチェックを入れておく。
 
-export to csv file on lhz_pc_(your_pc_id).csv .
+コマンドプロンプトとかで起動して
 
+lhz2csv.exe (pcid) 
 
+とか入力して実行すると
+
+lhz_pc_(pcid).csv
+
+とかいうエクセルファイル（CSV）ができあがるよ！
+
+lhz2csv.exe (冒険者窓口のURL)
+
+とかでも動くよ！
+
+エラー起きたらゴメソ。
+
+◆2014/08/01追加！
+
+get_lhz_data_book.exe
+
+これを実行すると、特技一覧とかアイテム一覧とかが取得できるよ！
+
+ｂｙ　サロンパス

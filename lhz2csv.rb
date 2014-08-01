@@ -82,6 +82,7 @@ UNION_LABEL = {
 }
 
 ITEM_LABEL = {
+  "type"             => "種別",
   "item_rank"        => "アイテムランク",
   "name"             => "アイテム名",
   "alias"            => "ユーザが付与した別名",
@@ -103,7 +104,8 @@ ITEM_LABEL = {
 }
 
 SKILL_LABEL = {
-  "type"             => "種別",
+  "job_type"         => "特技種別",
+  "type"             => "戦闘/一般",
   "name"             => "特技名",
   "skill_rank"       => "スキルランク",
   "skill_max_rank"   => "最大スキルランク",
@@ -130,7 +132,7 @@ uri = URI.parse(API_PATH+pcid+'.json')
 request = Net::HTTP::Get.new(uri.request_uri)
 request['Accept-Charset'] = 'euc-jp, utf-8'
 request['Accept-Language'] = 'ja, en'
-request['User-Agent'] = 'lhz2cvs ver-0.0.1'
+request['User-Agent'] = 'lhz2cvs ver-0.0.2'
 
 response = Net::HTTP.start(uri.host, uri.port) do |http|
   response = http.request(request)
